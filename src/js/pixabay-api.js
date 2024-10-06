@@ -1,8 +1,13 @@
 import axios from "axios";
 
-export default async function (searchRequest, page, perPage) {
-    return await axios.get(buildRequestURL(searchRequest, page, perPage));
-      
+export default async function (searchRequest, page, perPage) {   
+    return await axios.get(buildRequestURL(searchRequest, page, perPage)); 
+    // try {
+	// 	return await axios.get(buildRequestURL(searchRequest, page, perPage));
+	// } catch(error) {
+    //     console.log(error.message)
+	// 	return error.message
+	// }
 }
 
 function buildRequestURL(q, page, per_page) {

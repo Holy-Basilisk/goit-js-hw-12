@@ -29,7 +29,7 @@ form.addEventListener("submit", (event) => {
     page = 1;
     fetchImages(searchRequest, page, perPage)
         .then((response) => countPages(response.data))
-        .catch((error) => showMessage(error, "error"));
+        .catch((error) => showMessage(error.message, "error"));
 });
 
 moreBtn.addEventListener('click', () => {
@@ -37,8 +37,8 @@ moreBtn.addEventListener('click', () => {
     moreBtn.classList.add('hidden')
     loader.classList.remove('hidden')
     fetchImages(searchRequest, page, perPage)
-        .then((response) => countPages(response.data))
-        .catch((error) => showMessage(error));
+        .then((response) => countPages(response.data))        
+        .catch((error) => showMessage(error.message, "error"));
 })
 
 function countPages (response) {

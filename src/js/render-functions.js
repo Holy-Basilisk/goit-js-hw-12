@@ -8,6 +8,8 @@ import pathIcon from "../img/error-icon.svg";
 
 const galleryNode = document.querySelector(".gallery");
 const loader = document.querySelector('.loader');
+let gallery = new SimpleLightbox('.gallery-link', {captionsData: 'alt', overlayOpacity: 0.5});
+const moreBtn = document.querySelector('.more-btn');
 
 export default function (images) {
     loader.classList.add('hidden')
@@ -48,9 +50,15 @@ export default function (images) {
     }, '');
     
     galleryNode.insertAdjacentHTML('beforeend', markup);
-    let gallery = new SimpleLightbox('.gallery-link', {captionsData: 'alt', overlayOpacity: 0.5});
+    
 
     gallery.refresh();
+    
+    let height = (images[0].webformatHeight + 40)*2;
+    window.scrollBy({
+        top: height,
+        behavior: 'smooth'
+    })
 }
 
 export function showMessage(message, type) {
