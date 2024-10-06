@@ -1,0 +1,103 @@
+/* search form settings */
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#search-field {
+    width: 272px;
+    height: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: solid 1px #808080;
+    padding: 8px 16px;
+
+    /* font-family: Montserrat; в макете написано Монсерат, но по факту в макете другой шрифт */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #808080;
+}
+#search-field:hover {
+    border: 1px solid #000;
+}
+#search-field:focus {
+    border: 1px solid #4E75FF;
+    color: #2E2F42;
+}
+
+.search-btn {
+    width: 90px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 0px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #4E75FF;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
+.search-btn:hover {
+    background-color: #6C8CFF;
+}
+
+.message {
+    /* font-family: Montserrat; its not Montserrat */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
+
+/* gallery settings */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.gallery-item {
+    /* border: 2px solid #808080; */
+}
+
+.gallery-image {
+    width: 360px;
+    
+    display: block;
+}
+
+.gallery-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.gallery-descr {
+    display: flex;
+    justify-content: space-around;
+    color: #2E2F42;
+
+    /* font-family: Montserrat; is not Montserrat */
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+
+}
+
+.gallery-descr-header {    
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.sl-wrapper {
+    background-color: #2E2F42CC;
+}
