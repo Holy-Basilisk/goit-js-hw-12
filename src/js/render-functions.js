@@ -8,7 +8,6 @@ import pathIcon from "../img/error-icon.svg";
 
 const galleryNode = document.querySelector(".gallery");
 const loader = document.querySelector('.loader');
-// const moreBtn = document.querySelector('.more-btn');
 
 export default function (images) {
     loader.classList.add('hidden')

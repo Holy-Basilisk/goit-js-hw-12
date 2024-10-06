@@ -7,6 +7,7 @@ const moreBtn = document.querySelector('.more-btn');
 const galleryNode = document.querySelector(".gallery");
 const loader = document.querySelector('.loader');
 const counter = document.querySelector('.counter');
+const tooltip = document.querySelector('.tooltip');
 
 let searchRequest = '';
 let page = 1;
@@ -17,6 +18,7 @@ form.addEventListener("submit", (event) => {
     galleryNode.innerHTML = '';
     counter.innerHTML = '';
     moreBtn.classList.add('hidden')
+    tooltip.classList.add('hidden')
 
     searchRequest = event.target.elements.searchRequest.value.trim();
     if (searchRequest === '') {
@@ -49,6 +51,7 @@ function countPages (response) {
     } else {
         if (page > 1) {
             counter.innerHTML = `Page ${page} of ${totalPages}`;
+            tooltip.classList.remove('hidden')
         }
         renderImages(response.hits)      
     }
